@@ -19,4 +19,6 @@ try:
     # Create a database named 'CR'
     cursorObject.execute("CREATE DATABASE IF NOT EXISTS CR")
 
-print("All Done!")
+    print("All Done!")
+except mysql.connector.Error as err:
+    print(f"Error: {err}")
