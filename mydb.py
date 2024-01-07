@@ -19,18 +19,4 @@ try:
     # Create a database named 'CR'
     cursorObject.execute("CREATE DATABASE IF NOT EXISTS CR")
 
-    # Commit the changes
-    dataBase.commit()
-
-    print("Database 'CR' created successfully!")
-
-except mysql.connector.Error as err:
-    print(f"Error: {err}")
-
-finally:
-    # Close the cursor and connection
-    if 'cursorObject' in locals():
-        cursorObject.close()
-    if 'dataBase' in locals() and dataBase.is_connected():
-        dataBase.close()
-
+print("All Done!")
